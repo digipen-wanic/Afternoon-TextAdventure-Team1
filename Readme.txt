@@ -1,12 +1,7 @@
-This is the readme file for the game!
-<<<<<<< .mine
-Team Member Roles: 
-||||||| .r2
-Ryan was here!
-
-???? ????=======
-Ryan was here!
-Or was I?
-Thing again
-???? ????
->>>>>>> .r3
+Team Name: 
+Team Member Roles:
+Game Director/Manager --> Jordan Driscoll
+Tech Lead --> Yuval 
+QA --> Seth
+Game Designer --> John R. 
+Producer --> Cory C 
