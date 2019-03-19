@@ -53,12 +53,13 @@ Room* Room0_Build()
 	/* Pre-declare a room pointer which we will use to build the new room */
 	Room* room = NULL;
 
-	/* TODO REQUIRED: Call Room_Create with the Room 1 description:
+	/* TODO REQUIRED: Call Room_Create with the Room 1 description:	
 	"This is room 0. It is a display room with a cage in the middle. You can see a jeweled egg inside the cage.  There is a crack in the west wall, but you can't fit through it from this side.\n" */
-
+	room = Room_Create("Heyo mayo you're in jail for contempt of court");
 	/* TODO REQUIRED: Add an Exit "north" to Room 1 */
+	Room_AddRoomExit(room, "out", 1);
 	/* TODO BASIC: Add room exit shortcut for "n" */
-
+	
 	/* TODO REQUIRED: add an exit door to the list of items in the room, ExitDoor_Build() */
 
 	/* TODO ADVANCED: (not required) update the description and add a room exit to the "east" */
