@@ -31,28 +31,34 @@ CommandList* CreateCommandList()
 				and add it to the list of commands for the game
 	   NOTICE:  It uses a function called HandleHelpCommand, you can find
 				additional command handler functions by looking here: CommandHandlerFunctions.h */
+
+	/*Yuval connect*/
 	CommandList_Add(cmdListPtr, "help", HandleHelpCommand, true);
 	/* TODO BASIC: add support for a short alias "h" */
 
-	/* TODO REQUIRED: create the "quit" command
+	/* TODO REQUIRED: create the "quit" command */
+	CommandList_Add(cmdListPtr, "quit", HandleQuitCommand, true);
+	/* TODO BASIC: add a short alias "q" */
 
-	TODO BASIC: add a short alias "q" */
+	/* TODO REQUIRED: create the "drop" command */
+	CommandList_Add(cmdListPtr, "drop", HandleDropCommand, true);
+	/* TODO BASIC: add a short alias "d" */
 
-	/* TODO REQUIRED: create the "drop" command
-	TODO BASIC: add a short alias "d" */
+	/* TODO REQUIRED: create the "take" command */
+	CommandList_Add(cmdListPtr, "take", HandleTakeCommand, true);
+	/* TODO BASIC: add a short alias "t" */
 
-	/* TODO REQUIRED: create the "take" command
-	TODO BASIC: add a short alias "t" */
-
-	/* TODO REQUIRED: create the "use" command
-	TODO BASIC: add a short alias "u" */
+	/* TODO REQUIRED: create the "use" command */
+	CommandList_Add(cmdListPtr, "use", HandleUseCommand, true);
+	/* TODO BASIC: add a short alias "u" */
 
 	/* TODO REQUIRED: create the "look" command */
 	CommandList_Add(cmdListPtr, "look", HandleLookCommand, true);
 	/* TODO BASIC: add a short alias "l" */
 
-	/* TODO REQUIRED: create the "inventory" command
-	TODO BASIC: add a short alias "i" */
+	/* TODO REQUIRED: create the "inventory" command */
+	CommandList_Add(cmdListPtr, "inventory", HandleInventoryCommand, true);
+	/* TODO BASIC: add a short alias "i" */
 
 	/* TODO REQUIRED: create the "go" command */
 	CommandList_Add(cmdListPtr, "go", HandleGoCommand, true);

@@ -1,5 +1,3 @@
-﻿  LookCommandHandler.c
-  CommandListFactory.c
-  Generating Code...
-  GAM100Project.vcxproj -> C:\Users\yuval.talby\Desktop\a\69_seconds_to_the_bronx\TextAdventureVisualStudio\Debug\GAM100Project.exe
-  GAM100Project.vcxproj -> C:\Users\yuval.talby\Desktop\a\69_seconds_to_the_bronx\TextAdventureVisualStudio\Debug\GAM100Project.pdb (Partial PDB)
+﻿  WorldDataFactory.c
+  GAM100Project.vcxproj -> C:\Users\yuval.talby\Desktop\TextSVN\trunk\69_seconds_to_the_bronx\TextAdventureVisualStudio\Debug\GAM100Project.exe
+  GAM100Project.vcxproj -> C:\Users\yuval.talby\Desktop\TextSVN\trunk\69_seconds_to_the_bronx\TextAdventureVisualStudio\Debug\GAM100Project.pdb (Partial PDB)
