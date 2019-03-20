@@ -28,7 +28,7 @@ This could be used to create default states as well as loaded state.
 Room* RoomN_Build()
 {
 	/* Pre-declare a room pointer which we will use to build the new room */
-	Room* room;
+	Room* room = NULL;
 
 	/* Create the room
 	   include an initial room description */
@@ -109,6 +109,191 @@ Room* Room2_Build()
 	return room;
 }
 
+Room* Room3_Build()
+{
+	/* Pre-declare a room pointer which we will use to build the new room */
+	Room* room = NULL;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 1);  /* 1 = the room index this exit connects to */
+
+										 /* Items
+										 add items to the room */
+	ItemList_AddItem(Room_GetItemList(room), ExitDoor_Build());
+
+	/* Return the new room */
+	return room;
+}
+
+Room* Room4_Build()
+{
+	/* Pre-declare a room pointer which we will use to build the new room */
+	Room* room = NULL;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 1);  /* 1 = the room index this exit connects to */
+
+										 /* Items
+										 add items to the room */
+	ItemList_AddItem(Room_GetItemList(room), ExitDoor_Build());
+
+	/* Return the new room */
+	return room;
+}
+
+Room* Room5_Build()
+{
+	/* Pre-declare a room pointer which we will use to build the new room */
+	Room* room = NULL;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 1);  /* 1 = the room index this exit connects to */
+
+										 /* Items
+										 add items to the room */
+	ItemList_AddItem(Room_GetItemList(room), ExitDoor_Build());
+
+	/* Return the new room */
+	return room;
+}
+
+Room* Room6_Build()
+{
+	/* Pre-declare a room pointer which we will use to build the new room */
+	Room* room = NULL;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 1);  /* 1 = the room index this exit connects to */
+
+										 /* Items
+										 add items to the room */
+	ItemList_AddItem(Room_GetItemList(room), ExitDoor_Build());
+
+	/* Return the new room */
+	return room;
+}
+
+Room* Room7_Build()
+{
+	/* Pre-declare a room pointer which we will use to build the new room */
+	Room* room = NULL;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 1);  /* 1 = the room index this exit connects to */
+
+										 /* Items
+										 add items to the room */
+	ItemList_AddItem(Room_GetItemList(room), ExitDoor_Build());
+
+	/* Return the new room */
+	return room;
+}
+
+/* TODO REQUIRED: Build room 8 */
+Room* Room8_Build()
+{
+	/* TODO: Pre-declare a room pointer which we will use to build the new room */
+	Room* room = NULL;
+
+	/* TODO REQUIRED: Call Room_Create with the Room 8 description:
+	"This is room 8.  The room is isolated from the others, but you can see a crack in the east wall, just large enough to get through.\n" */
+	room = Room_Create("You enter the Garden. There is a gate to the NORTH. Two Boarhound guards stand next to the gate. You need a weapon to get past them.");
+	/* TODO REQUIRED: Add an Exit "east" to Room 0 */
+	/* TODO BASIC: Add exit shortcuts for "e" and "crack" */
+	Room_AddRoomExit(room, "east", 1);
+	/* TODO REQUIRED: Add a gold piece to the list of items in the room */
+	ItemList_AddItem(Room_GetItemList(room), ExitDoor_Build());
+	/* return the new room */
+	return room;
+}
+
+Room* Room9_Build()
+{
+	/* Pre-declare a room pointer which we will use to build the new room */
+	Room* room = NULL;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 1);  /* 1 = the room index this exit connects to */
+
+										 /* Items
+										 add items to the room */
+	ItemList_AddItem(Room_GetItemList(room), ExitDoor_Build());
+
+	/* Return the new room */
+	return room;
+}
+
+Room* Room10_Build()
+{
+	/* Pre-declare a room pointer which we will use to build the new room */
+	Room* room = NULL;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 1);  /* 1 = the room index this exit connects to */
+
+										 /* Items
+										 add items to the room */
+	ItemList_AddItem(Room_GetItemList(room), ExitDoor_Build());
+
+	/* Return the new room */
+	return room;
+}
+
+Room* Room11_Build()
+{
+	/* Pre-declare a room pointer which we will use to build the new room */
+	Room* room = NULL;
+
+	/* Create the room
+	include an initial room description */
+	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+
+	/* Exits
+	add one or more exits to allow navigation between rooms */
+	Room_AddRoomExit(room, "north", 1);  /* 1 = the room index this exit connects to */
+
+										 /* Items
+										 add items to the room */
+	ItemList_AddItem(Room_GetItemList(room), ExitDoor_Build());
+
+	/* Return the new room */
+	return room;
+}
 
 /* TODO ADVANCED: Build room 3 */
 /* TODO ADVANCED: Build room 4 */
