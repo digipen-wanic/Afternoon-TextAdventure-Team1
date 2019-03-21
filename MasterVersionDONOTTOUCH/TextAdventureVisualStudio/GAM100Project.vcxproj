@@ -84,6 +84,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ClawFunctions.h" />
+    <ClInclude Include="ScrewFunctions.h" />
     <ClInclude Include="Source\BrickFunctions.h" />
     <ClInclude Include="Source\CommandContext.h" />
     <ClInclude Include="Source\CommandData.h" />
@@ -117,8 +119,10 @@
     <ClInclude Include="Source\WorldDataFactory.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ClawFunctions.c" />
     <ClCompile Include="CommandListFactory.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="ScrewFunctions.c" />
     <ClCompile Include="Source\BrickFunctions.c" />
     <ClCompile Include="Source\CommandHandler.c" />
     <ClCompile Include="Source\CommandList.c" />

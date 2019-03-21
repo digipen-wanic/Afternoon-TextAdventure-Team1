@@ -76,6 +76,12 @@
     <ClCompile Include="Source\WorldData.c">
       <Filter>World Data</Filter>
     </ClCompile>
+    <ClCompile Include="ClawFunctions.c">
+      <Filter>World Data\Item Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="ScrewFunctions.c">
+      <Filter>World Data\Item Functions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\CommandContext.h">
@@ -170,6 +176,12 @@
     </ClInclude>
     <ClInclude Include="Source\WorldDataFactory.h">
       <Filter>World Data</Filter>
+    </ClInclude>
+    <ClInclude Include="ClawFunctions.h">
+      <Filter>World Data\Item Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="ScrewFunctions.h">
+      <Filter>World Data\Item Functions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
