@@ -100,5 +100,5 @@ void Screw_Use(CommandContext context, GameState* gameState, WorldData* worldDat
 Item* Screw_Build()
 {
 	/* Create a "screw" item, using the functions defined in this file */
-	return Item_Create("screw", "A normal screwdriver.", true, Screw_Use, Screw_Take, NULL);
+	return Item_Create("screw", "A normal screwdriver.", true, Screw_Use, Screw_Take, NULL, NULL);
 }

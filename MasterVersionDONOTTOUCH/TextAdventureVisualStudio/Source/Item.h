@@ -24,7 +24,7 @@ typedef void(*ItemFunc)(CommandContext context, GameState* gameState, WorldData*
 
 
 /* Create a new Item object with the provided data */
-Item* Item_Create(const char* name, const char* description, bool isCarryable, ItemFunc useFunc, ItemFunc takeFunc, ItemFunc dropFunc);
+Item* Item_Create(const char* name, const char* description, bool isCarryable, ItemFunc useFunc, ItemFunc takeFunc, ItemFunc dropFunc, ItemFunc speakFunc);
 
 /* Free the memory associated with a given Item object */
 void Item_Free(Item** itemPtr);

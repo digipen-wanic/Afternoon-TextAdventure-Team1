@@ -42,3 +42,5 @@ void HandleUseCommand(CommandData* command, GameState *gameState, WorldData *wor
 
 /* TODO ADVANCED: create aditional commands (add handler function declarations here)
    this may require the creation of additional .c files to implement the command functions */
+
+void HandleSpeakCommand(CommandData* command, GameState *gameState, WorldData *worldData);

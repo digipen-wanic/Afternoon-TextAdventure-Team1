@@ -47,5 +47,5 @@ void GoldPiece_Take(CommandContext context, GameState* gameState, WorldData* wor
 Item* GoldPiece_Build()
 {
 	/* Create a "gold piece" item, using the functions defined in this file */
-	return Item_Create("gold piece", "A small piece of gold\n", true, NULL, GoldPiece_Take, NULL);
+	return Item_Create("prole hen", "a working class hen from the outskirts of Chicken\n", true, NULL, GoldPiece_Take, NULL, NULL);
 }

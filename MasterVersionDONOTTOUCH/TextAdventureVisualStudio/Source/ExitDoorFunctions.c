@@ -50,5 +50,5 @@ void ExitDoor_Use(CommandContext context, GameState* gameState, WorldData* world
 Item* ExitDoor_Build()
 {
 	/* Create a "exit door" item, using the functions defined in this file */
-	return Item_Create("exit door", "The exit door has a large sign that reads: \"YOU MUST POSSESS ALL TREASURES BEFORE YOU CAN EXIT.\".\n", false, ExitDoor_Use, NULL, NULL);
+	return Item_Create("exit door", "The exit door has a large sign that reads: \"YOU MUST POSSESS ALL TREASURES BEFORE YOU CAN EXIT.\".\n", false, ExitDoor_Use, NULL, NULL, NULL);
 }

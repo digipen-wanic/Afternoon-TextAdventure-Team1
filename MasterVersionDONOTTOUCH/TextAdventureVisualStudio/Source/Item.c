@@ -28,11 +28,12 @@ typedef struct Item
 	ItemFunc useFunc;	/* a function called when the user uses this item, if any */
 	ItemFunc takeFunc;	/* a function called when the user takes this item, if any */
 	ItemFunc dropFunc;	/* a function called when the user uses this item, if any */
+	ItemFunc speakFunc; /* a function called when the user speaks, if any */
 } Item;
 
 
 /* Create a new Item object with the provided data */
-Item* Item_Create(const char* name, const char* description, bool isCarryable, ItemFunc useFunc, ItemFunc takeFunc, ItemFunc dropFunc)
+Item* Item_Create(const char* name, const char* description, bool isCarryable, ItemFunc useFunc, ItemFunc takeFunc, ItemFunc dropFunc, ItemFunc speakFunc)
 {
 	Item *item; /* the new item to be returned */
 
@@ -59,6 +60,7 @@ Item* Item_Create(const char* name, const char* description, bool isCarryable, I
 	item->useFunc = useFunc;
 	item->takeFunc = takeFunc;
 	item->dropFunc = dropFunc;
+	item->speakFunc = speakFunc;
 
 	/* return the new object */
 	return item;

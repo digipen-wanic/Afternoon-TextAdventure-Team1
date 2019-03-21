@@ -101,5 +101,5 @@ void Claw_Use(CommandContext context, GameState* gameState, WorldData* worldData
 Item* Claw_Build()
 {
 	/* Create a "claw" item, using the functions defined in this file */
-	return Item_Create("claw", "A strong metal claw used by bear warriors in war.", true, Claw_Use, Claw_Take, NULL);
+	return Item_Create("claw", "A strong metal claw used by bear warriors in war.", true, Claw_Use, Claw_Take, NULL, NULL);
 }

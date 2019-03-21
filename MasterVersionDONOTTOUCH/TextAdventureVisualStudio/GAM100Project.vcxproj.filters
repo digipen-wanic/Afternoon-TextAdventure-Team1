@@ -76,6 +76,9 @@
     <ClCompile Include="Source\WorldData.c">
       <Filter>World Data</Filter>
     </ClCompile>
+    <ClCompile Include="SpeakCommandHandler.c">
+      <Filter>Commands</Filter>
+    </ClCompile>
     <ClCompile Include="ClawFunctions.c">
       <Filter>World Data\Item Functions</Filter>
     </ClCompile>
@@ -182,6 +185,9 @@
     </ClInclude>
     <ClInclude Include="ScrewFunctions.h">
       <Filter>World Data\Item Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="SpeakCommandHandler.h">
+      <Filter>Commands</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

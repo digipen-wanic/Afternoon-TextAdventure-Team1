@@ -108,5 +108,5 @@ void Brick_Use(CommandContext context, GameState* gameState, WorldData* worldDat
 Item* Brick_Build()
 {
 	/* Create a "brick" item, using the functions defined in this file */
-	return Item_Create("brick", "A small red brick of indeterminate origin", true, Brick_Use, Brick_Take, NULL);
+	return Item_Create("brick", "A small red brick of indeterminate origin", true, Brick_Use, Brick_Take, NULL, NULL);
 }

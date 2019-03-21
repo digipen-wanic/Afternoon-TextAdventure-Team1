@@ -140,8 +140,7 @@ Room* Room4_Build()
 
 	/* Create the room
 	include an initial room description */
-	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
-
+ 
 	/* Exits
 	add one or more exits to allow navigation between rooms */
 	Room_AddRoomExit(room, "north", 1);  /* 1 = the room index this exit connects to */
@@ -161,11 +160,11 @@ Room* Room5_Build()
 
 	/* Create the room
 	include an initial room description */
-	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+	room = Room_Create("You have encounted the border of Beargaria. Before you is a small booth with nobawk attending to it. Wait, nevermind; there is a border agent present, but she is much smaller than your bearish brethren, leaving her almost unnoticed. How sad.\n");
 
 	/* Exits
 	add one or more exits to allow navigation between rooms */
-	Room_AddRoomExit(room, "north", 1);  /* 1 = the room index this exit connects to */
+    /* 1 = the room index this exit connects to */
 
 										 /* Items
 										 add items to the room */
