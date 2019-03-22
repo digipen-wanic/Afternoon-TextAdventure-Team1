@@ -20,6 +20,7 @@ This could be used to create default states as well as loaded state.
 #include "ExitDoorFunctions.h" /* ExitDoor_Build */
 #include "ClawFunctions.h" /* Claw_Build */
 #include "ScrewFunctions.h" /* Screw Build */
+#include "ProleHenFunctions.h" /* ProleHen build */
 
 
 
@@ -60,7 +61,7 @@ Room* Room0_Build()
 	room = Room_Create("Heyo mayo you're in jail for contempt of court");
 	/* TODO REQUIRED: Add an Exit "north" to Room 1 */
 	Room_AddRoomExit(room, "out", 1);
-	Room_AddRoomExit(room, "test", 8);
+	Room_AddRoomExit(room, "test", 5);
 	/* TODO BASIC: Add room exit shortcut for "n" */
 	
 	/* TODO REQUIRED: add an exit door to the list of items in the room, ExitDoor_Build() */
@@ -168,7 +169,7 @@ Room* Room5_Build()
 
 										 /* Items
 										 add items to the room */
-	ItemList_AddItem(Room_GetItemList(room), ExitDoor_Build());
+	ItemList_AddItem(Room_GetItemList(room), ProleHen_Build());
 
 	/* Return the new room */
 	return room;
@@ -181,15 +182,13 @@ Room* Room6_Build()
 
 	/* Create the room
 	include an initial room description */
-	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
+	room = Room_Create("If Yuval were less lazy, there would be content here. Dang.\n");
 
 	/* Exits
-	add one or more exits to allow navigation between rooms */
-	Room_AddRoomExit(room, "north", 1);  /* 1 = the room index this exit connects to */
+	add one or more exits to allow navigation between rooms */	
 
 										 /* Items
 										 add items to the room */
-	ItemList_AddItem(Room_GetItemList(room), ExitDoor_Build());
 
 	/* Return the new room */
 	return room;
@@ -316,6 +315,8 @@ WorldData* CreateInitialWorldData()
 	WorldData_SetRoom(worldData, 0, Room0_Build());
 	/* TODO REQUIRED: add rooms 1 and 2 to the world data */
 	WorldData_SetRoom(worldData, 1, Room1_Build());
+	WorldData_SetRoom(worldData, 5, Room5_Build());
+	WorldData_SetRoom(worldData, 6, Room6_Build());
 	WorldData_SetRoom(worldData, 8, Room8_Build());
 	WorldData_SetRoom(worldData, 10, Room10_Build());
 

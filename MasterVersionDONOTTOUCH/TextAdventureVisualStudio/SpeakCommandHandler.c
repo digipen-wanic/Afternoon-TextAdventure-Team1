@@ -5,12 +5,15 @@
 #include "WorldData.h" /* WorldData_GetRoom */
 #include "Room.h" /* Room_GetItemList */
 #include "ItemList.h" /* ItemList_FindItem, ItemList_Add, ItemList_Remove */
+#include "Item.h" /* ItemFunc, Item_GetUseFunc */
 
 void HandleSpeakCommand(CommandData *command, GameState* gameState, WorldData* worldData)
 {
 	Item* speakee; /* who or what is being spoken to */
 	Room* room; /* the current room */
 	ItemList** roomItemPtr; /* the list of items in the current room */
+	ItemFunc speakFunc; /* The function to be called for the given item when it is spoken to */
+	CommandContext speakContext = CommandContext_User; /* the context used for the "use" function*/
 	/* safety check on the parameters */
 	if ((command == NULL) || (command->noun == NULL) || (gameState == NULL) || (worldData == NULL))
 	{
@@ -37,4 +40,13 @@ void HandleSpeakCommand(CommandData *command, GameState* gameState, WorldData* w
 	/* retrieve the current room */	
 	printf("You speak to the %s\n", command->noun);
 
+	speakFunc = Item_GetSpeakFunc(speakee);
+	if (speakFunc == NULL)
+	{
+		/* no "use" function was defined, so the item cannot be used - inform the user of the problem and take no action*/
+		printf("Sadly, you hear no response.");
+		return;
+	}
+
+	speakFunc(speakContext, gameState, worldData);
 }

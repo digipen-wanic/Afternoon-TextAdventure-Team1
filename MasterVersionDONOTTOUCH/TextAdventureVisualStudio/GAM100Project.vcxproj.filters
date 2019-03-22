@@ -85,6 +85,9 @@
     <ClCompile Include="ScrewFunctions.c">
       <Filter>World Data\Item Functions</Filter>
     </ClCompile>
+    <ClCompile Include="ProleHenFunctions.c">
+      <Filter>World Data\Item Functions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\CommandContext.h">
@@ -188,6 +191,9 @@
     </ClInclude>
     <ClInclude Include="SpeakCommandHandler.h">
       <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="ProleHenFunctions.h">
+      <Filter>World Data\Item Functions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

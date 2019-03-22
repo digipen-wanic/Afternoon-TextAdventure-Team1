@@ -131,6 +131,13 @@ ItemFunc Item_GetDropFunc(Item* item)
 	return (item != NULL) ? item->dropFunc : NULL;
 }
 
+/* Retrieve the "speak" function for this item, if any */
+ItemFunc Item_GetSpeakFunc(Item* item)
+{
+	/* return the data if the parameter is not NULL, otherwise return NULL */
+	return (item != NULL) ? item->speakFunc : NULL;
+}
+
 
 /* Print a description of the item to standard output */
 void Item_Print(Item* item)

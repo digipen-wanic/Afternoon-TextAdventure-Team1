@@ -14,7 +14,7 @@
     <ProjectGuid>{3C381DA2-C3DB-485C-93E5-1E7A8F0A7FCC}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>GAM100Project</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
     <ProjectName>GAM100Project</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -85,6 +85,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ClawFunctions.h" />
+    <ClInclude Include="ProleHenFunctions.h" />
     <ClInclude Include="ScrewFunctions.h" />
     <ClInclude Include="Source\BrickFunctions.h" />
     <ClInclude Include="Source\CommandContext.h" />
@@ -123,6 +124,7 @@
     <ClCompile Include="ClawFunctions.c" />
     <ClCompile Include="CommandListFactory.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="ProleHenFunctions.c" />
     <ClCompile Include="ScrewFunctions.c" />
     <ClCompile Include="Source\BrickFunctions.c" />
     <ClCompile Include="Source\CommandHandler.c" />
