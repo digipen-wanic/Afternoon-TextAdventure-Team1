@@ -17,20 +17,17 @@ a description of an item or the current room.
 #include "Room.h" /* Room_Print, Room_GetItemList */
 #include "ItemList.h" /* ItemList_FindItem */
 #include "Item.h" /* Item_Print */
-#include "MudFunctions.h" /*mud purposes*/
-#include <string.h> /*strcmp*/
 
 
 /* Handles the "look" command, which outputs a description of an item or the current room */
-void HandleLookCommand(CommandData* command, GameState* gameState, WorldData* worldData)
+void HandleSearchCommand(CommandData* command, GameState* gameState, WorldData* worldData)
 {
 	Item* item; /* the item referred to by the command noun, if any */
 	Room* room; /* the current room */
 	ItemList** roomItemsPtr; /* the list of items in the room */
-	CommandContext lookContext = CommandContext_User; /* the context used for the "use" function*/
 
-	/* safety check on the parameters */
-	if ((command == NULL) || (gameState == NULL) || (worldData == NULL)) 
+							 /* safety check on the parameters */
+	if ((command == NULL) || (gameState == NULL) || (worldData == NULL))
 	{
 		return; /* take no action if the parameters are invalid */
 	}
@@ -42,14 +39,10 @@ void HandleLookCommand(CommandData* command, GameState* gameState, WorldData* wo
 	if ((command->noun == NULL) || (strnlen_s(command->noun, MAX_COMMAND_NOUN_LENGTH) == 0))
 	{
 		/* if we have a room (and we always should), print its description */
-		
 		if (room != NULL)
 		{
-			
-				printf("(looking at the room)\n"); /* clarify the target for the user */
-				Room_Print(room);
-			
-			
+			printf("(looking at the room)\n"); /* clarify the target for the user */
+			Room_Print(room);
 		}
 		return;
 	}
@@ -59,7 +52,7 @@ void HandleLookCommand(CommandData* command, GameState* gameState, WorldData* wo
 	if (item != NULL)
 	{
 		printf("(in your inventory)\n"); /* clarify the target for the user */
-		/* an item matching the noun was found in the user's inventory - print its description */
+										 /* an item matching the noun was found in the user's inventory - print its description */
 		Item_Print(item);
 		return;
 	}
@@ -76,17 +69,8 @@ void HandleLookCommand(CommandData* command, GameState* gameState, WorldData* wo
 	if (item != NULL)
 	{
 		printf("(in the room)\n"); /* clarify the target for the user */
-
-
-		if (gameState->currentRoomIndex == 5 && strcmp(command->noun, "mud") == 0)
-		{
-			Mud_Look(lookContext, gameState, worldData);
-		}
-		else
-		{
-			/* an item matching the noun was found in the current room - print its description */
-			Item_Print(item);
-		}
+								   /* an item matching the noun was found in the current room - print its description */
+		Item_Print(item);
 		return;
 	}
 

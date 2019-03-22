@@ -54,6 +54,7 @@ CommandList* CreateCommandList()
 
 	/* TODO REQUIRED: create the "look" command */
 	CommandList_Add(cmdListPtr, "look", HandleLookCommand, true);
+	CommandList_Add(cmdListPtr, "search", HandleLookCommand, true);
 	/* TODO BASIC: add a short alias "l" */
 
 	/* TODO REQUIRED: create the "inventory" command */

@@ -21,6 +21,8 @@ This could be used to create default states as well as loaded state.
 #include "ClawFunctions.h" /* Claw_Build */
 #include "ScrewFunctions.h" /* Screw Build */
 #include "ProleHenFunctions.h" /* ProleHen build */
+#include "MudFunctions.h" /*mud*/
+#include "BookOfLoreFunctions.h" /*book*/
 
 
 
@@ -169,6 +171,7 @@ Room* Room5_Build()
 
 										 /* Items
 										 add items to the room */
+	ItemList_AddItem(Room_GetItemList(room), Mud_Build());
 	ItemList_AddItem(Room_GetItemList(room), ProleHen_Build());
 
 	/* Return the new room */

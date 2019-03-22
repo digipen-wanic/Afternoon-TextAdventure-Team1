@@ -87,6 +87,7 @@
     <ClInclude Include="ClawFunctions.h" />
     <ClInclude Include="ProleHenFunctions.h" />
     <ClInclude Include="ScrewFunctions.h" />
+    <ClInclude Include="Source\BookOfLoreFunctions.h" />
     <ClInclude Include="Source\BrickFunctions.h" />
     <ClInclude Include="Source\CommandContext.h" />
     <ClInclude Include="Source\CommandData.h" />
@@ -109,6 +110,7 @@
     <ClInclude Include="Source\Item.h" />
     <ClInclude Include="Source\ItemList.h" />
     <ClInclude Include="Source\LookCommandHandler.h" />
+    <ClInclude Include="Source\MudFunctions.h" />
     <ClInclude Include="Source\QuitCommandHandler.h" />
     <ClInclude Include="Source\Room.h" />
     <ClInclude Include="Source\RoomExit.h" />
@@ -126,6 +128,7 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="ProleHenFunctions.c" />
     <ClCompile Include="ScrewFunctions.c" />
+    <ClCompile Include="Source\BookOfLoreFunctions.c" />
     <ClCompile Include="Source\BrickFunctions.c" />
     <ClCompile Include="Source\CommandHandler.c" />
     <ClCompile Include="Source\CommandList.c" />
@@ -143,6 +146,7 @@
     <ClCompile Include="Source\Item.c" />
     <ClCompile Include="Source\ItemList.c" />
     <ClCompile Include="Source\LookCommandHandler.c" />
+    <ClCompile Include="Source\MudFunctions.c" />
     <ClCompile Include="Source\QuitCommandHandler.c" />
     <ClCompile Include="Source\Room.c" />
     <ClCompile Include="Source\RoomExit.c" />
