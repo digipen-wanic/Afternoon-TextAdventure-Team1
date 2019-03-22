@@ -76,6 +76,18 @@
     <ClCompile Include="Source\WorldData.c">
       <Filter>World Data</Filter>
     </ClCompile>
+    <ClCompile Include="LeaveCommandHandler.c">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="CellKeyFunctions.c">
+      <Filter>World Data\Item Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreamCommandHandler.c">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="DanceCommandHandler.c">
+      <Filter>Commands</Filter>
+    </ClCompile>
     <ClCompile Include="SpeakCommandHandler.c">
       <Filter>Commands</Filter>
     </ClCompile>
@@ -188,6 +200,18 @@
     </ClInclude>
     <ClInclude Include="Source\WorldDataFactory.h">
       <Filter>World Data</Filter>
+    </ClInclude>
+    <ClInclude Include="LeaveCommandHandler.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="CellKeyFunctions.h">
+      <Filter>World Data\Item Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreamCommandHandler.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="DanceCommandHandler.h">
+      <Filter>Commands</Filter>
     </ClInclude>
     <ClInclude Include="ClawFunctions.h">
       <Filter>World Data\Item Functions</Filter>

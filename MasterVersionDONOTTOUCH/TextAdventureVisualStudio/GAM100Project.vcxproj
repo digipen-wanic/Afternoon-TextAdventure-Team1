@@ -84,6 +84,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CellKeyFunctions.h" />
+    <ClInclude Include="DanceCommandHandler.h" />
+    <ClInclude Include="ScreamCommandHandler.h" />
+    <ClInclude Include="LeaveCommandHandler.h" />
     <ClInclude Include="ClawFunctions.h" />
     <ClInclude Include="ProleHenFunctions.h" />
     <ClInclude Include="ScrewFunctions.h" />
@@ -123,9 +127,13 @@
     <ClInclude Include="SpeakCommandHandler.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CellKeyFunctions.c" />
     <ClCompile Include="ClawFunctions.c" />
     <ClCompile Include="CommandListFactory.c" />
+    <ClCompile Include="LeaveCommandHandler.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="ScreamCommandHandler.c" />
+    <ClCompile Include="DanceCommandHandler.c" />
     <ClCompile Include="ProleHenFunctions.c" />
     <ClCompile Include="ScrewFunctions.c" />
     <ClCompile Include="Source\BookOfLoreFunctions.c" />

@@ -67,6 +67,13 @@ CommandList* CreateCommandList()
 
 	/* TODO ADVANCED: create aditional commands
 	this should require the creation of additional .c files to implement the command functions */
+	CommandList_Add(cmdListPtr, "leave", HandleLeaveCommand, true);
+
+	/*Adds the scream command*/
+	CommandList_Add(cmdListPtr, "scream", HandleScreamCommand, true);
+
+	/*Adds the dance command*/
+	CommandList_Add(cmdListPtr, "dance", HandleDanceCommand, true);
 
 	CommandList_Add(cmdListPtr, "speak", HandleSpeakCommand, true);
 

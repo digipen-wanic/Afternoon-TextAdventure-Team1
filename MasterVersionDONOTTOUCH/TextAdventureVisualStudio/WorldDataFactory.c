@@ -1,12 +1,11 @@
 /******************************************************************************
-filename    WorldDataFactory.c
-author      Justin Chambers
-DP email    justin.chambers@digipen.edu
-course      GAM100 ** Do not use this code in your team project
+filename    Room0_Build()
+author      Jordan Driscoll
+DP email    jordan.driscoll@digipen.edu
+course      Video Game Programming 100
 
 Brief Description:
-This file defines the WorldData factory, which creates the WorldData objects used
-in this game.
+This is the room that you begin at, it will lead you to either room to or room 3
 
 This could be used to create default states as well as loaded state.
 
@@ -23,6 +22,7 @@ This could be used to create default states as well as loaded state.
 #include "ProleHenFunctions.h" /* ProleHen build */
 #include "MudFunctions.h" /*mud*/
 #include "BookOfLoreFunctions.h" /*book*/
+
 
 
 
@@ -46,6 +46,7 @@ Room* RoomN_Build()
 	/* Items
 	   add items to the room */
 	ItemList_AddItem(Room_GetItemList(room), ExitDoor_Build());
+	
 
 	/* Return the new room */
 	return room;
@@ -55,14 +56,49 @@ Room* RoomN_Build()
 /* TODO REQUIRED: Build room 0 */
 Room* Room0_Build()
 {
+	
 	/* Pre-declare a room pointer which we will use to build the new room */
+	/*Don't bother changing this*/ 
 	Room* room = NULL;
+	
+	/* TODO REQUIRED: Call Room_Create with the Room 1 description:	*/
+	/*You are a bear trapped in Beargarian prison.You have recently been detained for attempted murder in the bordering country of Chicken.After being declawed, your goal is now to escape the prison, immigrate to Chicken, and murder the Top Bawk at the Capital.*/
+	room = Room_Create("You find yourself in a chambear, your paws are sore from being declawed.");
 
-	/* TODO REQUIRED: Call Room_Create with the Room 1 description:	
-	"This is room 0. It is a display room with a cage in the middle. You can see a jeweled egg inside the cage.  There is a crack in the west wall, but you can't fit through it from this side.\n" */
-	room = Room_Create("Heyo mayo you're in jail for contempt of court");
+	/*Time to write out everything that happens in the room*/
+	
+	/*User types: leave, escape, go anywhere*/
+
+		/*The doors locked*/
+	
+	/*User types search*/
+		/*Say: You find a fur sharpener*/
+	
+	/*User types dance*/
+		/*You boogey down, which ultimately results in nothing happening*/
+	
+	/*User types scream*/
+		/*A guard has been alerted*/
+		
+		/*The user types hide*/
+			/*The guard has arrived and does not see you*/
+			/*The user types use fur sharpener*/
+			/*The guard is down, his keys are in sight*/
+			/*The player types steal keys*/
+				/*You now have the keys to the cell door*/
+				/*Player types Exit*/
+					/*Room_AddRoomExit(room, "out", 1);*/
+					
+	
+	
+	
+	
+	
+	
+	
+	
 	/* TODO REQUIRED: Add an Exit "north" to Room 1 */
-	Room_AddRoomExit(room, "out", 1);
+	/*Room_AddRoomExit(room, "out", 1);*/
 	Room_AddRoomExit(room, "test", 5);
 	/* TODO BASIC: Add room exit shortcut for "n" */
 	

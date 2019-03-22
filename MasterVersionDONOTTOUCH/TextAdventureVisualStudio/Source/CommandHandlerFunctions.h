@@ -41,6 +41,11 @@ void HandleTakeCommand(CommandData* command, GameState *gameState, WorldData *wo
 void HandleUseCommand(CommandData* command, GameState *gameState, WorldData *worldData);
 
 /* TODO ADVANCED: create aditional commands (add handler function declarations here)
-   this may require the creation of additional .c files to implement the command functions */
-
+  
+   /* Handles the "leave" command, which outputs a description of an item or the current room */
+void HandleLeaveCommand(CommandData* command, GameState *gameState, WorldData *worldData);
 void HandleSpeakCommand(CommandData* command, GameState *gameState, WorldData *worldData);
+
+void HandleScreamCommand(CommandData* command, GameState *gameState, WorldData *worldData);
+
+void HandleDanceCommand(CommandData* command, GameState *gameState, WorldData *worldData);
