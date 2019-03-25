@@ -106,6 +106,21 @@
     <ClCompile Include="Source\BookOfLoreFunctions.c">
       <Filter>World Data\Item Functions</Filter>
     </ClCompile>
+    <ClCompile Include="KnifeFunctions.c">
+      <Filter>World Data\Item Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="RugFunctions.c">
+      <Filter>World Data\Item Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyFunctions.c">
+      <Filter>World Data\Item Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="LoungeKeyFunctions.c">
+      <Filter>World Data\Item Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="HotPotatoFunctions.c">
+      <Filter>World Data\Item Functions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\CommandContext.h">
@@ -229,6 +244,21 @@
       <Filter>World Data\Item Functions</Filter>
     </ClInclude>
     <ClInclude Include="Source\BookOfLoreFunctions.h">
+      <Filter>World Data\Item Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="KnifeFunctions.h">
+      <Filter>World Data\Item Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="RugFunctions.h">
+      <Filter>World Data\Item Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyFunctions.h">
+      <Filter>World Data\Item Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="LoungeKeyFunctions.h">
+      <Filter>World Data\Item Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="HotPotatoFunctions.h">
       <Filter>World Data\Item Functions</Filter>
     </ClInclude>
   </ItemGroup>

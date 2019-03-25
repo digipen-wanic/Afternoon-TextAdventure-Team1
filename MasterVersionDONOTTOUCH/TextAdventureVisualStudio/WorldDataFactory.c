@@ -22,6 +22,9 @@ This could be used to create default states as well as loaded state.
 #include "ProleHenFunctions.h" /* ProleHen build */
 #include "MudFunctions.h" /*mud*/
 #include "BookOfLoreFunctions.h" /*book*/
+#include "RugFunctions.h" /*Rug_Build*/
+#include "KnifeFunctions.h" /*Knife_Build*/
+#include "HotPotatoFunctions.h" /*Spicy potato building*/
 
 
 
@@ -111,23 +114,16 @@ Room* Room0_Build()
 }
 
 
+/*John Richardson*/
 /* TODO REQUIRED: Build room 1 */
 Room* Room1_Build()
 {
 	/* Pre-declare a room pointer which we will use to build the new room */
 	Room* room = NULL;
-
-	/* TODO REQUIRED: Call Room_Create with the Room 1 description:
-	"This is room 1.  There is a large mirror here, and it shimmers as you approach.\n" */
-
-	/* TODO REQUIRED: Add an Exit "through the mirror" to Room 2 */
-	/* TODO BASIC: Add exit shortcuts for "through mirror" and "mirror" */
-
-	/* TODO REQUIRED: Add an Exit "south" back to Room 0 */
-	/* TODO BASIC: Add room exit shortcut for "s" */
-
-	/* TODO REQUIRED: Add a brick to the list of items in the room */
-
+	/*creates the room*/
+	room = Room_Create("you enter the kitchen. There is a table in the center with a knife on top. There is a locked door to the east. There is a creepy clown standing next to the locked door holding a pair of keys");
+	/*adds the knife item to the room*/
+	ItemList_AddItem(Room_GetItemList(room), Knife_Build());
 	/* return the new room */
 	return room;
 }
@@ -151,24 +147,16 @@ Room* Room2_Build()
 	return room;
 }
 
+/*John Richardson*/
 Room* Room3_Build()
 {
 	/* Pre-declare a room pointer which we will use to build the new room */
 	Room* room = NULL;
-
-	/* Create the room
-	include an initial room description */
-	room = Room_Create("DEBUG: This is a template - Include a description for the room here\n");
-
-	/* Exits
-	add one or more exits to allow navigation between rooms */
-	Room_AddRoomExit(room, "north", 1);  /* 1 = the room index this exit connects to */
-
-										 /* Items
-										 add items to the room */
-	ItemList_AddItem(Room_GetItemList(room), ExitDoor_Build());
-
-	/* Return the new room */
+	/*creates the room*/
+	room = Room_Create("You enter the lounge. You look around see a rug and the floor and a bookshelf towards the east with scrape marks underneath, but you cannot seem to find the exit.");
+	/*adds the rug item to the room*/
+	ItemList_AddItem(Room_GetItemList(room), Rug_Build());
+	/* return the new room */
 	return room;
 }
 
@@ -221,14 +209,14 @@ Room* Room6_Build()
 
 	/* Create the room
 	include an initial room description */
-	room = Room_Create("If Yuval were less lazy, there would be content here. Dang.\n");
+	room = Room_Create("You're on a bus going straight to the Top Bawk. A potato is thrown at you, and it looks hot. Who threw the potato? You don't know. All you know is that you have to think fast - within the context of course.\n");
 
 	/* Exits
 	add one or more exits to allow navigation between rooms */	
 
 										 /* Items
 										 add items to the room */
-
+	ItemList_AddItem(Room_GetItemList(room), HotPotato_Build());
 	/* Return the new room */
 	return room;
 }

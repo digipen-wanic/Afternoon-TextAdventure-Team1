@@ -14,7 +14,7 @@
     <ProjectGuid>{3C381DA2-C3DB-485C-93E5-1E7A8F0A7FCC}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>GAM100Project</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
     <ProjectName>GAM100Project</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -86,6 +86,11 @@
   <ItemGroup>
     <ClInclude Include="CellKeyFunctions.h" />
     <ClInclude Include="DanceCommandHandler.h" />
+    <ClInclude Include="HotPotatoFunctions.h" />
+    <ClInclude Include="KeyFunctions.h" />
+    <ClInclude Include="KnifeFunctions.h" />
+    <ClInclude Include="LoungeKeyFunctions.h" />
+    <ClInclude Include="RugFunctions.h" />
     <ClInclude Include="ScreamCommandHandler.h" />
     <ClInclude Include="LeaveCommandHandler.h" />
     <ClInclude Include="ClawFunctions.h" />
@@ -130,8 +135,13 @@
     <ClCompile Include="CellKeyFunctions.c" />
     <ClCompile Include="ClawFunctions.c" />
     <ClCompile Include="CommandListFactory.c" />
+    <ClCompile Include="HotPotatoFunctions.c" />
+    <ClCompile Include="KeyFunctions.c" />
+    <ClCompile Include="KnifeFunctions.c" />
     <ClCompile Include="LeaveCommandHandler.c" />
+    <ClCompile Include="LoungeKeyFunctions.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="RugFunctions.c" />
     <ClCompile Include="ScreamCommandHandler.c" />
     <ClCompile Include="DanceCommandHandler.c" />
     <ClCompile Include="ProleHenFunctions.c" />

@@ -1,3 +1,9 @@
+/******************************************************************************
+filename    MudFunctions.c
+author      Yuval Talby
+3/22/2019
+******************************************************************************/
+
 #include "stdafx.h"
 #include "GoldPieceFunctions.h"
 #include "GameState.h"
@@ -38,7 +44,7 @@ void Mud_Look(int context, GameState* gameState, WorldData* worldData)
 		/* add to the user's score */
 		GameState_ChangeScore(gameState, 5);
 		/* the gold piece has not been scored, so mark the flag */
-		gameState->gameFlags = GameFlags_Add(gameState->gameFlags, "bookRevealed");
+		gameState->gameFlags = GameFlags_Add(gameState->gameFlags, "hasBook");
 		ItemList_AddItem(Room_GetItemList(room), BookOfLore_Build());
 		
 	}

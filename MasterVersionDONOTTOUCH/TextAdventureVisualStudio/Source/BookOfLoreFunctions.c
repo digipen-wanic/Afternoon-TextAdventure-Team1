@@ -1,3 +1,9 @@
+/******************************************************************************
+filename    BookOfLoreFunctions.c
+author      Yuval Talby
+3/22/2019
+******************************************************************************/
+
 #include "stdafx.h" /* UNREFERENCED_PARAMETER, NULL*/
 #include "GameState.h" /* struct GameState, GameState_ChangeScore */
 #include "GameFlags.h" /* GameFlags_IsInList */

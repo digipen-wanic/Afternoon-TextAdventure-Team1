@@ -4,6 +4,8 @@ ProleHenFunction.c
 This file was made by: Yuval gang
 Brief: The chicken is an NPC which is also an item. She is the border agent that decides whether or not you go through
 
+3/25/2019
+
 */
 
 #include "stdafx.h"
@@ -17,13 +19,13 @@ Brief: The chicken is an NPC which is also an item. She is the border agent that
 typedef struct WorldData WorldData;
 
 
-/* Helper: The action performed when the gold piece is taken. */
+/* Helper: The action performed when the hen is spoken to. */
 void ProleHen_Speak(CommandContext context, GameState* gameState, WorldData* worldData)
 {
 	Room* room; /* The current room */
 	char dialogueChoice;
 	/*int addressGuess;*/
-	int hasBook = true;
+	int hasBook = false;
 	/* -1 means upset, 0 means cordial, 1 means satisfied. works really nicely for score multiplier at the end of the encounter, and 1 means the player can proceed.*/
 	int henEmotion = 0;
 	/* avoid W4 warnings on unused parameters - this function conforms to a function typedef */
@@ -41,10 +43,10 @@ void ProleHen_Speak(CommandContext context, GameState* gameState, WorldData* wor
 		hasBook = true;
 	}
 
-	if (!GameFlags_IsInList(gameState->gameFlags, "henSpokenTo"))
+	if (!(GameFlags_IsInList(gameState->gameFlags, "passedConvo") && hasBook))
 	{
 		room = WorldData_GetRoom(worldData, gameState->currentRoomIndex);
-		/* tell the user that something cool happens when they pick up the gold piece */
+		/* a fun conversation */
 		printf("[Prole Hen] \"Bok bok bawk bok, bock bokk boke. Bawk!\"");
 		if (hasBook)
 		{
@@ -92,6 +94,8 @@ void ProleHen_Speak(CommandContext context, GameState* gameState, WorldData* wor
 		}
 
 		/* this needs to be fleshed out but it's literally 4:44 am rn */
+		/* s/o to me in the past from me in the present, it's 4:54 am here */
+		/* by the way this allows you through the gate, and sets the score multiplier positive */
 		else if(dialogueChoice == '2')
 		{
 			printf("\"Bock, bok bokk bock. Bawk ba-bock.\"");
@@ -101,6 +105,7 @@ void ProleHen_Speak(CommandContext context, GameState* gameState, WorldData* wor
 			}
 			printf("\n");
 			henEmotion = 1;
+			gameState->gameFlags = GameFlags_Add(gameState->gameFlags, "passConvo");
 			Room_AddRoomExit(room, "gate", 6);
 		}
 
@@ -113,15 +118,14 @@ void ProleHen_Speak(CommandContext context, GameState* gameState, WorldData* wor
 		}
 		
 		/* add or subtract to the user's score */
-		GameState_ChangeScore(gameState, 5 * henEmotion);
-		/* the gold piece has not been scored, so mark the flag */
-		gameState->gameFlags = GameFlags_Add(gameState->gameFlags, "henSpokenTo");
+		if(!(GameFlags_IsInList(gameState->gameFlags, "passedConvo")))
+			GameState_ChangeScore(gameState, 5 * henEmotion);
 	}
 }
 
-/* Build a "gold piece" object */
+/* Build a "prole hen" object */
 Item* ProleHen_Build()
 {
-	/* Create a "gold piece" item, using the functions defined in this file */
+	/* Create a "prole hen" item, using the functions defined in this file */
 	return Item_Create("prole hen", "a working class hen from the outskirts of Chicken\n", true, NULL, NULL, NULL, ProleHen_Speak);
 }
